@@ -1,0 +1,33 @@
+@import './_mixins';
+// @import './_variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    @include flex(row, center, center);    
+}
+
+svg {outline: 2px solid red}
+.snake {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+    // transition: stroke-dashoffset 6s;
+
+    animation: fade-in 6s forwards;
+    &:hover {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fade-in {
+    to {
+      stroke-dashoffset: 0;
+    } 
+  }

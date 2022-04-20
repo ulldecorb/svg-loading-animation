@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+svg {
+  outline: 2px solid red;
+}
+
+.snake {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  -webkit-animation: fade-in 6s forwards;
+          animation: fade-in 6s forwards;
+}
+
+.snake:hover {
+  stroke-dashoffset: 0;
+}
+
+@-webkit-keyframes fade-in {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

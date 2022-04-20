@@ -22,10 +22,63 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.container {
+  height: 90vmin;
+  width: 90vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.container__text {
+  position: absolute;
+  height: 200px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__text .text__title, .container__text .text__subtitle, .container__text .text__loading {
+  background: -webkit-linear-gradient(#dfc26a, #c99d1c, #423412, #c99d1c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container__text .text__title {
+  padding: 10px 0;
+  font-size: 2rem;
 }
 
 svg {
-  outline: 2px solid red;
+  position: absolute;
 }
 
 .snake {
@@ -33,10 +86,6 @@ svg {
   stroke-dashoffset: 700;
   -webkit-animation: fade-in 6s forwards;
           animation: fade-in 6s forwards;
-}
-
-.snake:hover {
-  stroke-dashoffset: 0;
 }
 
 @-webkit-keyframes fade-in {

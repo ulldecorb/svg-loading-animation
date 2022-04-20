@@ -1,5 +1,5 @@
 @import './_mixins';
-// @import './_variables.scss';
+@import './_variables.scss';
 
 * {
     margin: 0;
@@ -11,19 +11,45 @@
 body {
     height: 100vh;
     width: 100vw;
-    @include flex(row, center, center);    
+    @include flex(row, center, center);
+    background-color: $background-color;
+    overflow: hidden;
 }
 
-svg {outline: 2px solid red}
+.container {
+    height: 90vmin;
+    width: 90vmin;
+    @include flex ( row, center, center );
+    transition: opacity $container-opacity-transition;
+    
+    &__text {
+      position: absolute;
+        height: 200px;
+        width: 400px;
+        @include flex (column, center, center);
+        
+        .text {
+            &__title, &__subtitle , &__loading{
+                background: -webkit-linear-gradient( $text-gradient1,  $text-gradient2, $text-gradient3, $text-gradient4);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;              
+            }
+
+            &__title {
+              padding: 10px 0;
+              font-size: 2rem;
+            }
+        }
+    }
+}
+
+svg {position: absolute}
+
 .snake {
     stroke-dasharray: 700;
     stroke-dashoffset: 700;
-    // transition: stroke-dashoffset 6s;
-
     animation: fade-in 6s forwards;
-    &:hover {
-        stroke-dashoffset: 0;
-    }
 }
 
 @keyframes fade-in {

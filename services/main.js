@@ -1,32 +1,37 @@
 
 const svg = document.getElementById('svg');
-const fadeInDelay = [ 700, 1400, 2100, 2800, 3500, 4200, 4900, 5600 ];
-const pathsize = 'M 100 190 l 90 -90 l -90 -90 l -90 90 l 90 90 z';
-const fadeOutSnakes = () => {
-    console.log(svg.outerHTML);
+const fadeOutDelay = [0, 250, 500, 750, 1000, 1250, 1500, 1750];
 
-    svg.style.width = '150vmax';
-    svg.style.height = '150vmax';
+document.body.addEventListener("click", fadeOutSnakes);
 
+function fadeOutSnakes () {
+    const snakes = document.getElementsByClassName('snake');
+    for (let i = snakes.length -1; i >= 0; i-- ) {
+        const snake = snakes[i];
+        const timeout = fadeOutDelay[i];
+        
+        setTimeout(() => {
+            snake.setAttribute( 'd', 'M 100 500 l 400 -400 l -400 -400 l -400 400 l 400 400 z');
+        }, timeout);
+    }
 }
 
 
-// (function createSnakes () {
-//     for ( i = 0; i < 2; i ++) {
-//         // const spanSize = snakeSize[i]
-//         const delay = fadeInDelay[i];
+
+
+
+// const fadeInDelay = [ 700, 1400, 2100, 2800, 3500, 4200, 4900, 5600 ];
+// const pathsize = (x) => `M 100 1${x} l ${x} -${x} l -${x} -${x} l -${x} ${x} l ${x} ${x} z`;
+// createSnakes();
+
+// function createSnakes () {
+//     for ( let i = 9; i > 1; i --) {
 //         const path = document.createElement("path");
-//         path.setAttribute("d", pathsize);
+//         path.setAttribute("d", pathsize(i*10));
 //         path.setAttribute("stroke", "#6e5c0c");
-//         path.setAttribute("stroke-width", 3);
-//         path["stroke-width"] = 3;
+//         path.setAttribute("stroke-width", 1);
 //         path.setAttribute("fill", "transparent");
 //         path.classList.add('snake');
-
-//         setTimeout(() => {
-//             svg.appendChild(path);
-//         }, delay);
+//         svg.appendChild(path);
 //     }
-// })()
-
-document.body.addEventListener("click", fadeOutSnakes);
+// }

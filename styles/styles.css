@@ -77,15 +77,13 @@ body {
   font-size: 2rem;
 }
 
-svg {
-  position: absolute;
-}
-
 .snake {
   stroke-dasharray: 700;
   stroke-dashoffset: 700;
   -webkit-animation: fade-in 6s forwards;
           animation: fade-in 6s forwards;
+  -webkit-transition: d 1s;
+  transition: d 1s;
 }
 
 .snake:nth-child(1) {

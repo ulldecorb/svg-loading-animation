@@ -44,12 +44,11 @@ body {
     }
 }
 
-svg {position: absolute}
-
 .snake {
     stroke-dasharray: 700;
     stroke-dashoffset: 700;
     animation: fade-in 6s forwards;
+    transition: d 1s;
 }
 
 .snake:nth-child(1){animation-delay: 3.5s}

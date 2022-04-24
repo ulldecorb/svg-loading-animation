@@ -1,6 +1,6 @@
 # svg-loading-animation
 Lab for animation svg.
-[Open in browser]() 👈
+[Open in browser](https://ulldecorb.github.io/svg-loading-animation) 👈
 ## Technologies applied
 + HTML: 5
 + SASS 

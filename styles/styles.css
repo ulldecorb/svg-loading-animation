@@ -77,15 +77,53 @@ body {
   font-size: 2rem;
 }
 
-svg {
-  position: absolute;
-}
-
 .snake {
   stroke-dasharray: 700;
   stroke-dashoffset: 700;
   -webkit-animation: fade-in 6s forwards;
           animation: fade-in 6s forwards;
+  -webkit-transition: d 1s;
+  transition: d 1s;
+}
+
+.snake:nth-child(1) {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.snake:nth-child(2) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.snake:nth-child(3) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.snake:nth-child(4) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.snake:nth-child(5) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.snake:nth-child(6) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.snake:nth-child(7) {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.snake:nth-child(8) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 @-webkit-keyframes fade-in {

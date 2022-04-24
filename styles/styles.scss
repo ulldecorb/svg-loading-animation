@@ -44,13 +44,21 @@ body {
     }
 }
 
-svg {position: absolute}
-
 .snake {
     stroke-dasharray: 700;
     stroke-dashoffset: 700;
     animation: fade-in 6s forwards;
+    transition: d 1s;
 }
+
+.snake:nth-child(1){animation-delay: 3.5s}
+.snake:nth-child(2){animation-delay: 3s}
+.snake:nth-child(3){animation-delay: 2.5s}
+.snake:nth-child(4){animation-delay: 2s}
+.snake:nth-child(5){animation-delay: 1.5s}
+.snake:nth-child(6){animation-delay: 1s}
+.snake:nth-child(7){animation-delay: .5s}
+.snake:nth-child(8){animation-delay: 0s}
 
 @keyframes fade-in {
     to {

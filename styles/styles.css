@@ -27,8 +27,6 @@ body {
 }
 
 .container {
-  height: 90vmin;
-  width: 90vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

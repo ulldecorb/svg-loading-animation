@@ -17,8 +17,8 @@ body {
 }
 
 .container {
-    height: 90vmin;
-    width: 90vmin;
+    // height: 90vmin;
+    // width: 90vmin;
     @include flex ( row, center, center );
     transition: opacity $container-opacity-transition;
     
